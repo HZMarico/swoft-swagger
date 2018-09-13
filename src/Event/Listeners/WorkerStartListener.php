@@ -40,6 +40,19 @@ class WorkerStartListener implements WorkerStartInterface
                     // 复制文件
                     Co::exec("cp -r $copyFolder $folder");
                 }
+                // config/swagger目录路径
+                $configFolder = \alias('@root/config/swagger');
+                // 判断是否存在config/swagger
+                if (!\is_dir($configFolder)) {
+                    // 模板路径
+                    $copyFolder = dirname(dirname(dirname(__DIR__))).'/config/swagger';
+                    // 判断目录是否存在
+                    if (!\is_dir($copyFolder)) {
+                        throw new \Exception('swagger conifg folder missing.', 404);
+                    }
+                    // 复制文件
+                    Co::exec("cp -r $copyFolder $configFolder");
+                }
                 // 判断是否存在目录
                 if (\is_dir($folder)) {
                     // 新路径

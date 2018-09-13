@@ -14,19 +14,19 @@
 > use with self
 
 ```
-Copy WorkerStartListener To app/Listeners
-Modify Namespace
+1. Copy WorkerStartListener To app/Listeners && Modify Namespace
 
-Copy SwaggerMiddleware To app/Middlewares
-Modify Namespace
+2. Copy SwaggerMiddleware To app/Middlewares && Modify Namespace
 
-Add bootstrap code To bin/bootstrap.php
+3. Add bootstrap code To bin/bootstrap.php
 # under require_once
 
-Copy public/swagger To public/swagger
+4. Copy public/swagger To public/swagger
 
+5. Copy config/swagger to config/swagger
+
+6. composer require zircote/swagger-php
 # add swagger-php
-composer require zircote/swagger-php
 ```
 
 # How to use 
@@ -56,12 +56,6 @@ return [
         ]
     ],
 ]
-```
-
-> Copy config/swagger to config/swagger
-
-```
-Copy folder
 ```
 
 > Start App

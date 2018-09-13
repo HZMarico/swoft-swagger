@@ -37,7 +37,7 @@ class SwaggerMiddleware implements MiddlewareInterface
         if (in_array($path, ['swagger', 'api'])) {
             return \response()->redirect('/swagger/');
         }
-        // if path is swagger.json
+        // if path is swagger
         if (strpos($path, 'swagger') === 0) {
             // 判断是否为纯swagger，并且存在目录
             if ($path == 'swagger/' && \is_dir(\alias('@root/public/swagger'))) {
