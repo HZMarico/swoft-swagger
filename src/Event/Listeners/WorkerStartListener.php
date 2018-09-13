@@ -32,7 +32,7 @@ class WorkerStartListener implements WorkerStartInterface
                 // 判断是否存在public swagger
                 if (!\is_dir($folder)) {
                     // 原路径
-                    $copyFolder = dirname(dirname(dirname(__DIR__))).'/web/swagger';
+                    $copyFolder = dirname(dirname(dirname(__DIR__))).'/public/swagger';
                     // 判断目录是否存在
                     if (!\is_dir($copyFolder)) {
                         throw new \Exception('swagger folder missing.', 404);
@@ -45,7 +45,7 @@ class WorkerStartListener implements WorkerStartInterface
                     // 新路径
                     $bin = \alias('@root/vendor/bin/swagger');
                     // 执行
-                    Co::exec(".$bin -o .$folder -e vendor");
+                    Co::exec("$bin -o $folder -e vendor");
                 }
             });
         }

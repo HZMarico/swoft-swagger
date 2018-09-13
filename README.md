@@ -2,23 +2,47 @@
 
 > use swagger with [Swoft](https://github.com/swoft-cloud/swoft)
 
-# 使用方法
+# How to use （Now）
 
-> 1. Modify `composer.json`
+> use with gitlab
+
+```
+1. add swoft/swagger in gitlab
+2. modify composer.json
+```
+
+> use with self
+
+```
+Copy WorkerStartListener To app/Listeners
+Modify Namespace
+
+Copy SwaggerMiddleware To app/Middlewares
+Modify Namespace
+
+Add bootstrap code To bin/bootstrap.php
+# under require_once
+
+Copy public/swagger To public/swagger
+```
+
+# How to use 
+
+> Modify `composer.json` （Future）
 
 ```
 "require": {
-    "marico/swoft-swagger" : "dev-master"
+    "swoft/swagger" : "dev-master"
 }
 ```
 
-> 2. Modify `.env`, Add Configuration Item
+> Modify `.env`, Add Configuration Item
 
 ```
 AUTO_SWAGGER=true
 ```
 
-> 3. Add SwaggerMiddleware
+> Add SwaggerMiddleware
 
 ```
 # config file : `config/beans/base.php`
@@ -31,7 +55,7 @@ return [
 ]
 ```
 
-> 4. Start App
+> Start App
 
 ```
 # Visit `http://hostName/swagger/`
@@ -40,7 +64,7 @@ Example : http://127.0.0.1/swagger/
 Example : http://127.0.0.1/api
 ```
 
-# 注意事项
+# Precautions
 
 > 目前此项目主要为我司内部使用，开源旨在给大家提供一个swagger融入swoft项目的思路
 
@@ -48,7 +72,9 @@ Example : http://127.0.0.1/api
 
 > 目前SwaggerMiddleware拦截器会占用 /api /swagger /swagger/，若存在项目冲突，可自行修改
 
-# 鸣谢
+> 如果未来有幸被编入swoft官方拓展，此拓展使用方式会更加简单，目前，略微复杂
+
+# Acknowledgments
 
 > 基于Swoole的协程框架 [Swoft](https://github.com/swoft-cloud/swoft)
 
