@@ -8,7 +8,7 @@
 
 ```
 "require": {
-    "hzmarico/swoft-swagger" : "dev-master"
+    "marico/swoft-swagger" : "dev-master"
 }
 ```
 
