@@ -1,0 +1,32 @@
+{
+    "name": "marico/swoft-swagger",
+    "type": "library",
+    "license": "Apache-2.0",
+    "require": {
+        "zircote/swagger-php": "^2.0"
+    },
+    "require-dev": {
+        "php": ">=7.0",
+        "phpunit/phpunit": "^5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Swoft\\Swagger\\": "src/"
+        },
+        "files": [
+            "src/bootstrap.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Marico",
+            "email": "marico@marico.cn"
+        }
+    ],
+    "repositories":  {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
+}
