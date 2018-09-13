@@ -58,6 +58,12 @@ return [
 ]
 ```
 
+> Copy config/swagger to config/swagger
+
+```
+Copy folder
+```
+
 > Start App
 
 ```
