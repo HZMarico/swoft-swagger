@@ -24,6 +24,9 @@ Add bootstrap code To bin/bootstrap.php
 # under require_once
 
 Copy public/swagger To public/swagger
+
+# add swagger-php
+composer require zircote/swagger-php
 ```
 
 # How to use 
