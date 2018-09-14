@@ -3,7 +3,7 @@
  * @SWG\Swagger(
  *     schemes={"http"},
  *     host="",
- *     basePath="/api/v1",
+ *     basePath="",
  *     @SWG\Info(
  *         version="1.0.0",
  *         title="API",
