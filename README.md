@@ -1,4 +1,4 @@
-# swoft-swagger
+# Swoft-Swagger
 
 > use swagger with [Swoft](https://github.com/swoft-cloud/swoft)
 
