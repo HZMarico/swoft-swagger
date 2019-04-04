@@ -67,6 +67,37 @@ Example : http://127.0.0.1/swagger/
 Example : http://127.0.0.1/api
 ```
 
+# Example
+
+> Controller
+
+```
+/**
+ * @SWG\Delete(
+ *     path="/account/{id}",
+ *     tags={"Account"},
+ *     summary="Delete Account (Marico)",
+ *     security={{"Authorization": {}}},
+ *     @SWG\Parameter(name="id", in="path", required=true, type="number", default="1", description="autoId"),
+ *     @SWG\Response(response="200", description="success", @SWG\Schema(ref="#/definitions/ReturnBody"))
+ * )
+ * @RequestMapping(route="{id}", method={RequestMethod::DELETE})
+ *
+ * @param Integer $id
+ * @param Request $request
+ *
+ * @return array
+ * @throws \Exception
+ */
+ public function delete(int $id, Request $request)
+ {
+    // 进行数据删除
+    $this->accountLogic->delete($id);
+    // 返回成功结果
+    return Result::success();
+}
+```
+
 # Precautions
 
 > 目前此项目主要为我司内部使用，开源旨在给大家提供一个swagger融入swoft项目的思路
